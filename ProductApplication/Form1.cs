@@ -20,7 +20,7 @@ namespace ProductApplication
         private bool isUpdateMode = false;
         private string productCode ;
 
-        List<Product> newProducts = new List<Product>();
+       
 
         private void saveButton_Click(object sender, EventArgs e)
         {
@@ -88,6 +88,10 @@ namespace ProductApplication
                         if (rowAffected > 0)
                         {
                             MessageBox.Show(@"Data successfully Insert...!");
+                            ShowAllProduct();
+                            productCodeTextBox.Clear();
+                            productDiscriptionTextBox.Clear();
+                            productQuantityTextBox.Clear();
                         }
                         else
                         {
@@ -133,6 +137,8 @@ namespace ProductApplication
 
         public void ProductListView(List<Product> newProducts)
         {
+            int quan = 0;
+            int total = 0;
             showProductListView.Items.Clear();
             foreach (var product in newProducts)
             {
@@ -140,7 +146,10 @@ namespace ProductApplication
                 item.SubItems.Add(product.prodDescription);
                 item.SubItems.Add(product.prodQuantity.ToString());
                 showProductListView.Items.Add(item);
+                quan = product.prodQuantity;
+                total = total + quan;
             }
+            totalQuantityTextBox.Text = Convert.ToString(total);
         }
 
         public void ShowAllProduct()
@@ -153,6 +162,8 @@ namespace ProductApplication
 
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
+
+            List<Product> newProducts = new List<Product>();
 
             while (reader.Read())
             {
@@ -182,6 +193,7 @@ namespace ProductApplication
             {
                 isUpdateMode = true;
                 saveButton.Text = @"Update";
+                productCodeTextBox.ReadOnly = true;
                 productCode = product.prodCode;
 
                 productCodeTextBox.Text = product.prodCode;
@@ -203,8 +215,8 @@ namespace ProductApplication
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
 
-            
 
+            List<Product> newProducts = new List<Product>();
 
             while (reader.Read())
             {
@@ -224,16 +236,6 @@ namespace ProductApplication
         private void Form1_Load(object sender, EventArgs e)
         {
             ShowAllProduct();
-
-            int quan = 0;
-            int total = 0;
-            foreach (var product in newProducts)
-            {
-                quan = product.prodQuantity;
-                total = total + quan;
-            }
-           
-            totalQuantityTextBox.Text = Convert.ToString(total);
         }
     }
 }

@@ -19,3 +19,12 @@ F:\ASP-DotNet\ProductApplication\ProductApplication\obj\Debug\ProductApplication
 F:\ASP-DotNet\ProductApplication\ProductApplication\obj\Debug\ProductApplication.Form1.resources
 F:\ASP-DotNet\ProductApplication\ProductApplication\obj\Debug\ProductApplication.Properties.Resources.resources
 F:\ASP-DotNet\ProductApplication\ProductApplication\obj\Debug\ProductApplication.csproj.GenerateResource.Cache
+F:\GitUplodProgram\ProductApplication\ProductApplication\bin\Debug\ProductApplication.exe.config
+F:\GitUplodProgram\ProductApplication\ProductApplication\obj\Debug\ProductApplication.exe
+F:\GitUplodProgram\ProductApplication\ProductApplication\obj\Debug\ProductApplication.pdb
+F:\GitUplodProgram\ProductApplication\ProductApplication\bin\Debug\ProductApplication.exe
+F:\GitUplodProgram\ProductApplication\ProductApplication\bin\Debug\ProductApplication.pdb
+F:\GitUplodProgram\ProductApplication\ProductApplication\obj\Debug\ProductApplication.csprojResolveAssemblyReference.cache
+F:\GitUplodProgram\ProductApplication\ProductApplication\obj\Debug\ProductApplication.Form1.resources
+F:\GitUplodProgram\ProductApplication\ProductApplication\obj\Debug\ProductApplication.Properties.Resources.resources
+F:\GitUplodProgram\ProductApplication\ProductApplication\obj\Debug\ProductApplication.csproj.GenerateResource.Cache
